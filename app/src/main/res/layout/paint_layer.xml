@@ -11,27 +11,83 @@
         android:layout_gravity="center"
         android:gravity="center">
         <Button
+            android:id="@+id/btn_undo"
+            android:text="←"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            />
+        <Button
+            android:id="@+id/btn_redo"
+            android:text="→"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            />
+        <Button
             android:id="@+id/btn_red"
-            android:text="赤"
-            android:layout_width="wrap_content"
+            android:text="赤線"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="36dp"
             />
         <Button
             android:id="@+id/btn_blue"
-            android:text="青"
-            android:layout_width="wrap_content"
+            android:text="青線"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="36dp"
             />
         <Button
             android:id="@+id/btn_green"
-            android:text="緑"
-            android:layout_width="wrap_content"
+            android:text="緑線"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            />
+        <Button
+            android:id="@+id/btn_circle"
+            android:text="○"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            />
+        <Button
+            android:id="@+id/btn_square"
+            android:text="□"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            />
+        <Button
+            android:id="@+id/btn_text"
+            android:text="T"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            />
+        <Button
+            android:id="@+id/btn_img"
+            android:text="img"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="36dp"
             />
         <Button
             android:id="@+id/btn_change"
             android:text="切替"
-            android:layout_width="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="36dp"
             />
 

@@ -10,11 +10,8 @@ import androidx.activity.result.contract.ActivityResultContracts.StartActivityFo
 import android.content.Context
 import android.graphics.Color
 import android.graphics.PixelFormat
-import android.view.WindowManager
-import android.view.LayoutInflater
-import android.view.ViewGroup
+import android.view.*
 import android.widget.Button
-import android.view.Gravity
 
 class MainActivity : AppCompatActivity() {
 
@@ -66,18 +63,43 @@ class MainActivity : AppCompatActivity() {
         params.gravity = Gravity.TOP or Gravity.LEFT
         val paintLayer = layoutInflater.inflate(R.layout.paint_layer, null) as ViewGroup
         val paintView = paintLayer.findViewById<PaintView>(R.id.view_paint)
+        val undo = paintLayer.findViewById<Button>(R.id.btn_undo)
+        undo.setOnClickListener {
+            paintView.undo()
+        }
+        val redo = paintLayer.findViewById<Button>(R.id.btn_redo)
+        redo.setOnClickListener {
+            paintView.redo()
+        }
         val red = paintLayer.findViewById<Button>(R.id.btn_red)
         red.setOnClickListener {
-            paintView.setColor(Color.RED)
+            paintView.setColor(Color.rgb(255,70,70))
         }
         val blue = paintLayer.findViewById<Button>(R.id.btn_blue)
         blue.setOnClickListener {
-            paintView.setColor(Color.BLUE)
+            paintView.setColor(Color.rgb(70,70,255))
         }
         val green = paintLayer.findViewById<Button>(R.id.btn_green)
         green.setOnClickListener {
-            paintView.setColor(Color.GREEN)
+            paintView.setColor(Color.rgb(70,255,70))
         }
+        val circle = paintLayer.findViewById<Button>(R.id.btn_circle)
+        circle.setOnClickListener {
+            paintView.circle()
+        }
+        val square = paintLayer.findViewById<Button>(R.id.btn_square)
+        square.setOnClickListener {
+            paintView.square()
+        }
+        val text = paintLayer.findViewById<Button>(R.id.btn_text)
+        text.setOnClickListener {
+            paintView.text()
+        }
+        val img = paintLayer.findViewById<Button>(R.id.btn_img)
+        img.setOnClickListener {
+            paintView.img()
+        }
+
         val change = paintLayer.findViewById<Button>(R.id.btn_change)
         change.setOnClickListener {
             if(isEnabled){
